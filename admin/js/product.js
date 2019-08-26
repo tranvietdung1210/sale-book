@@ -21,10 +21,10 @@ async function showProduct()  {
                 <td class="cart-image"><img src="${products[i].image}"</td>
                 <td>${products[i].category}</td>
                 <td>${products[i].price}</td>
-                <td><button id="delete${products[i].id}" type="button">
+                <td><button class="btn btn-danger" id="delete${products[i].id}" type="button">
                     Xóa
                 </button></td>
-                <td><button id="update${products[i].id}" type="button">
+                <td><button class="btn btn-info" id="update${products[i].id}" type="button">
                     Sửa
                 </button></td>
             </tr>

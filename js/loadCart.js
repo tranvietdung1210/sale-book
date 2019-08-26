@@ -17,7 +17,7 @@ function loadCart() {
                     <td >${result[i].author}</td>
                     <td class="price">${priceFM}</td>
                     
-                    <td class="button-delete"><button id="${result[i].id}" type="button">
+                    <td class="button-delete"><button class="btn btn-danger" id="${result[i].id}" type="button">
                         Xóa
                     </button></td>
 

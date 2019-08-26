@@ -453,7 +453,10 @@ a {
 
 
 /* Login */
-
+.form-footer{
+    display: flex;
+    justify-content: flex-end;
+}
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -609,7 +612,10 @@ a {
     margin-bottom: 35px;
 } 
 .thanh-toan{
-    margin-top: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
 }
 .button-delete{
     width: 100px;

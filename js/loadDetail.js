@@ -50,18 +50,6 @@ async function loadCategoryProduct() {
                     </span>
                 </div>
             </div>
-            <div class="">
-                <div class="review-product-head">
-                    Bình luận
-                </div>
-                <div class="comment-product-detail">
-                    <form id="form-add-comment">
-                        <input type="textArea" id="comment" name="comment" placeholder="Viết bình luận..">
-    
-                        <button type="button" onclick="">Bình luận</button>
-                        </form>
-                </div>
-            </div>
             </div>
             `
             document.getElementById('details').innerHTML = html
