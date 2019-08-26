@@ -1,0 +1,25 @@
+.cart-image img{
+    min-height: 100px;
+    max-height: 150px;
+  }
+
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.input-wrapper input{
+    width: 100%;
+    font-size: 13px;
+    padding: 7px 5px;
+    border-radius: 5px;
+    border: 1px solid #e8e9c8;
+    margin-bottom: 5px;
+}
+.thanh-toan-header {
+    font-weight: bold;
+}
+
+/* .thanh-toan{
+
+} */

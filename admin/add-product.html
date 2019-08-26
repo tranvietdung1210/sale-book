@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+  
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+  
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  
+    <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+    <script src="js/add-product.js"></script>
+    <script src="../js/main.js"></script>
+    
+  
+    <script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyCjl4nvtiN4WqqGg02d88LpsmoBhUskxpk",
+        authDomain: "sale-book.firebaseapp.com",
+        databaseURL: "https://sale-book.firebaseio.com",
+        projectId: "sale-book",
+        storageBucket: "sale-book.appspot.com",
+        messagingSenderId: "290672386281",
+        appId: "1:290672386281:web:bfaa30565b131963"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+  
+  </head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Quản lý sản phẩm</div>
+      <div class="list-group list-group-flush">
+          <a class="list-group-item list-group-item-action bg-light" href="../html/home.html">Shop</a>
+
+        <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle list-group-item list-group-item-action bg-light">Sản phẩm</a>
+        <ul class="collapse list-unstyled" id="homeSubmenu1">
+            <li>
+                <a class="list-group-item list-group-item-action bg-light collapse-space" href="product.html">Danh sách Sản phẩm</a>
+            </li>
+            <li>
+                <a class="list-group-item list-group-item-action bg-light collapse-space" href="add-product.html">Thêm Sản phẩm</a>
+            </li>
+        </ul>
+        
+
+        <a href="#homeSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle list-group-item list-group-item-action bg-light">Đơn hàng</a>
+        <ul class="collapse list-unstyled" id="homeSubmenu3">
+            <li>
+                <a class="list-group-item list-group-item-action bg-light collapse-space" href="bill.html"> Danh sách Đơn hàng</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+        <button class="btn btn-primary" type="button" onclick="logOut()">SignOut</button>
+        
+      </nav>
+
+      <div class="container-fluid">
+        <div>
+            <a class="product-header" href="product.html">Thêm sản phẩm</a>
+        </div>
+        <div class='add-product'>
+          <form id="form-add-product">
+            <label for="name">Tên sách</label>
+            <input type="text" id="name" name="name" placeholder="Nhập tên sách..">
+        
+            <label for="author">Tên tác giả</label>
+            <input type="text" id="author" name="author" placeholder="Nhập tên tác giả..">
+        
+            <label for="image">Hình ảnh</label>
+            <input type="text" id="image" name="image" placeholder="Thêm đường dẫn..">
+
+            <label for="category">Thể loại</label>
+            <input type="text" id="category" name="category" placeholder="Nhập thể loại..">
+
+            <label for="price">Giá</label>
+            <input type="number" id="price" name="price" placeholder="Nhập giá..">
+
+            <label for="description">Mô tả</label>
+            <input type="text" id="description" name="description" placeholder="Nhập mô tả..">
+          </form>
+          <button onclick="addProduct()">Add</button>   
+        </div>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+
+</html>

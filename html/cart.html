@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/cart.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <title>Home</title>
+    
+        <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+        <script src="../js/loadCart.js"></script>
+        <script src="../js/addCart.js"></script>
+        <script src="../js/loadHome.js"></script>
+
+    
+        <script>
+            var firebaseConfig = {
+                apiKey: "AIzaSyCjl4nvtiN4WqqGg02d88LpsmoBhUskxpk",
+                authDomain: "sale-book.firebaseapp.com",
+                databaseURL: "https://sale-book.firebaseio.com",
+                projectId: "sale-book",
+                storageBucket: "sale-book.appspot.com",
+                messagingSenderId: "290672386281",
+                appId: "1:290672386281:web:bfaa30565b131963"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+        </script>
+    
+</head>
+
+<body>
+    <header>
+        <div class='header-top'>
+            <div class="container top-info">
+                <a class="home-info" style="padding-right: 0px;" href='login.html'>Admin</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="header-body-left col-3">
+                    <a href="home.html"><img src="../image/Untitled-1.png"></a>
+                </div>
+                <div class="header-body-right col-9">
+                    <div class="search">
+                        <input class="form-control" type="text" placeholder="Search" aria-label="Search">       
+                    </div>
+                    <div class="cart">
+                        <a href="cart.html"><button onclick="_loadCart()" type="button" class="btn btn-outline-warning">Cart</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-nav">
+            <div class="container">
+                <nav class="navbar navbar-expand-sm navbar-dark">
+                        <!-- Brand/logo -->
+                    <a class="navbar-brand col-3 category" href="#">DANH MỤC SÁCH</a>
+                    
+                    <!-- Links -->
+                    <ul class="navbar-nav col-9">
+                        <li class="nav-item">
+                        <a class="nav-link" href="category.html?category=Thiếu%20nhi">THIẾU NHI</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="category.html?category=KH-GD">KHOA HỌC - GIÁO DỤC</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="category.html?category=Kinh%20tế">KINH TẾ</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="category.html?category=kĩ%20năng">KỸ NĂNG</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="category.html?category=trong%20nước">TRONG NƯỚC</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="category.html?category=nước%20ngoài">NƯỚC NGOÀI</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+            <h2>GIỎ HÀNG</h2>
+            <table class="header" id="cart">
+                <tr>
+                    <th>Ảnh sản phẩm</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Tên tác giả</th>
+                    <th>Giá</th>
+                    <th>Xoá</th>
+                </tr>
+                </table>
+            
+            <div class="thanh-toan">
+                <a href="thanh_toan.html"><button type="button">Thanh toán</button></a>
+            </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="ft-text">
+                <span> Trải nghiệm cùng DMQbook </br>
+                    </br>
+                    Với mong muốn mang lại cho bạn đọc một điểm đến lý tưởng để mua sách với những trải nghiệm tốt nhất,
+                    DMQbook chỉ tập trung vào sản phẩm sách với hàng chục đầu sách khác nhau. Bạn có thể dễ dàng và
+                    nhanh chóng tìm được những đầu sách như ý với ít thao tác nhất và ít thời gian nhất.
+                    Đội ngũ tư vấn của DMQbook với sự tận tâm và nhiệt tình luôn nỗ lực để sẵn sàng phục vụ các yêu cầu
+                    của bạn, và giúp bạn tìm ra những cuốn sách phù hợp nhất với nhu cầu đọc của mình.</br>
+                    </br>
+                    DMQbook cảm ơn tất cả bạn đọc đã luôn ủng hộ và cam kết luôn phục vụ bạn hết mình!
+                </span>
+            </div>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

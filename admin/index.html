@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Simple Sidebar - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <script src="../js/main.js"></script>
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading"><a href="index.html">Quản lý sản phẩm</div></a>
+      <div class="list-group list-group-flush">
+          <a class="list-group-item list-group-item-action bg-light" href="../html/home.html">Shop</a>
+
+        <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle list-group-item list-group-item-action bg-light">Sản phẩm</a>
+        <ul class="collapse list-unstyled" id="homeSubmenu1">
+            <li>
+                <a class="list-group-item list-group-item-action bg-light collapse-space" href="product.html">Danh sách Sản phẩm</a>
+            </li>
+            <li>
+                <a class="list-group-item list-group-item-action bg-light collapse-space" href="add-product.html">Thêm Sản phẩm</a>
+            </li>
+        </ul>
+        
+
+        <a href="#homeSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle list-group-item list-group-item-action bg-light">Đơn hàng</a>
+        <ul class="collapse list-unstyled" id="homeSubmenu3">
+            <li>
+                <a class="list-group-item list-group-item-action bg-light collapse-space" href="bill.html"> Danh sách Đơn hàng</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+        <button class="btn btn-primary" type="button" onclick="logOut()">SignOut</button>
+        
+      </nav>
+
+      <div class="container-fluid">
+        <h1 class="mt-4">Simple Sidebar</h1>
+        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
+        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+
+</html>

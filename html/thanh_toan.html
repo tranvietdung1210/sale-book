@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/thanhtoan.css">
+<link rel="stylesheet" href="../css/cart.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<title>Home</title>
+
+<script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+<script src="../js/addCart.js"></script>
+<script src="../js/thanh-toan.js"></script>
+
+<script>
+var firebaseConfig = {
+    apiKey: "AIzaSyCjl4nvtiN4WqqGg02d88LpsmoBhUskxpk",
+    authDomain: "sale-book.firebaseapp.com",
+    databaseURL: "https://sale-book.firebaseio.com",
+    projectId: "sale-book",
+    storageBucket: "sale-book.appspot.com",
+    messagingSenderId: "290672386281",
+    appId: "1:290672386281:web:bfaa30565b131963"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+</script>
+
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="logo">
+            <a href="home.html"><img src="../image/Untitled-1.png"></a>
+        </div>
+        
+        <div class="row">
+        <div class="col-4">
+            <div class="info">
+                <div class="thanh-toan-header">
+                    Thông tin mua hàng
+                </div>
+                <div>
+                    <form id="form-thanhtoan" class="input-info">
+                        <div class = "input-wrapper">
+                                <input type="text" id="email" name="email" placeholder ="Email" />
+                                <div id = "email-error" class= "message-error"></div>   
+            
+                        </div>
+                        <div class = "input-wrapper">
+                                <input type="text" id="name" name="name" placeholder ="Họ và tên" />
+                                <div id= "name-error" class= "message-error"></div>
+                        </div>
+                        <div class = "input-wrapper">
+                                <input type="text" id="phone" name="sdt" placeholder ="Số điện thoại" />
+                                <div id = "phone-error" class= "message-error"></div>
+            
+                        </div>
+                        <div class = "input-wrapper">
+                                <input type="text" id="address" name="adress" placeholder ="Địa chỉ" />
+                                <div id= "address-error" class= "message-error"></div>
+                        </div>
+                        <br>
+
+                
+
+                        <div class="form-group">
+                            <label class="thanh-toan-header" for="option">Hình thức thanh toán</label>
+                            <select class="form-control" id="option">
+                                <option>Chuyển khoản qua ngân hàng</option>
+                                <option>Thanh toán khi giao hàng</option>
+                            </select>
+                        </br>
+ 
+                            <div class="">
+                                <p>Hình thức chuyển khoản qua ngân hàng:</p>
+                                <p>Số TK: 123 456 789</p>
+                                <p>Chủ TK: BMQ Book</p>
+                                <p>Ngân hàng Vietcombank Hà Nội</p>
+                            </div>
+                          </div>
+                        <!-- <br>
+                        <select id="option">
+                            <option>Chuyển khoản qua ngân hàng</option>
+                            <option>Thanh toán khi giao hàng</option>
+                        </select> -->
+                    </form>
+                </div>
+        
+            </div>
+
+        </div>
+        <div class="don-hang col-8">
+                <div class="don-hang header">
+                    <div class="thanh-toan-header">
+                        Đơn hàng
+                    </div>
+            
+            
+                </div>
+                <div class="don-hang table">
+                    <table id="thanhtoan">
+                            <tr class="header">
+                                <th>Ảnh sản phẩm</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Số lượng</th>
+                                <th>Tổng</th>
+                            </tr>
+                    </table>
+            
+            
+                </div>
+                <div class="don-hang">
+                    <div class="total-price">
+                        <div class="thanh-toan-header">Tổng tiền:</div>
+                        <div class="price" id="totalPrice"></div>
+                    </div>
+                    <div class="thanhtoan">
+                        <a class="go-back" href="cart.html">Quay về giỏ hàng</a>
+                        <button id="addBill" type="submit" onclick="addBill()">ĐẶT HÀNG</button>
+                    </div>
+                    <div class="" id="return"></div>
+                </div>
+
+            </div>
+        
+
+    </div>
+
+
+</body>
+
+</html>
