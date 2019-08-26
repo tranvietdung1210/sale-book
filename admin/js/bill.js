@@ -22,10 +22,10 @@ async function showProduct()  {
                 <td>${products[i].option}</td>
                 <td>${products[i].address}</td>
                 <td>${products[i].price}</td>
-                <td><button id="confirm${products[i].id}" type="button">
+                <td><button class="btn btn-success" id="confirm${products[i].id}" type="button">
                     Xác nhận
                 </button></td>
-                <td><button id="delete${products[i].id}" type="button">
+                <td><button class="btn btn-danger" id="delete${products[i].id}" type="button">
                     Xóa
                 </button></td>
             </tr>
