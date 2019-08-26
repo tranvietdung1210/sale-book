@@ -13,6 +13,7 @@ async function showProduct()  {
     try{
         // let doc = await result.get()
         for(i in products){
+            priceFM = new Intl.NumberFormat('vi', { style: 'currency', currency: 'VND' }).format(products[i].price)
             html = `
             <tr id="">
                 <th>${parseInt(i,10)+1}</th>
@@ -20,7 +21,7 @@ async function showProduct()  {
                 <td>${products[i].author}</td>
                 <td class="cart-image"><img src="${products[i].image}"</td>
                 <td>${products[i].category}</td>
-                <td>${products[i].price}</td>
+                <td>${priceFM}</td>
                 <td><button class="btn btn-danger" id="delete${products[i].id}" type="button">
                     Xóa
                 </button></td>
