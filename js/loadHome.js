@@ -30,7 +30,7 @@ async function loadHome() {
                     
                 </div>
                 <div class="single-item-body">
-                    <p class="single-item-title"  >
+                    <p class="single-item-title">
                     ${products[i].name}
                     </p>
                     <p class="single-item-author">
@@ -83,3 +83,17 @@ setTimeout(loadHome, 200)
 function signOut(){
     firebase.auth().signOut()
 }
+
+function myFunction() {
+    var input = document.getElementById("Search");
+    var filter = input.value.toLowerCase();
+    var nodes = document.getElementsByClassName('col-sm-3');
+  
+    for (i = 0; i < nodes.length; i++) {
+      if (nodes[i].innerText.toLowerCase().includes(filter)) {
+        nodes[i].style.display = "block";
+      } else {
+        nodes[i].style.display = "none";
+      }
+    }
+  }
