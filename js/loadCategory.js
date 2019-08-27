@@ -23,7 +23,13 @@ async function loadCategoryProduct() {
         // async function deleteApp(){
         //     firebase.firestore().collection("product").doc("1.2").delete()
         // }
+
         try{
+            abc = `
+                <div class="category-book-title">
+                    <a href="#">Trang chủ</a>&nbsp;&nbsp; <span> > </span> &nbsp;&nbsp; <a href="#">${category}</a>
+                </div>
+            `
             // let doc = await result.get()
             for(i in products){
                 priceFM = new Intl.NumberFormat('vi', { style: 'currency', currency: 'VND' }).format(products[i].price)
@@ -56,7 +62,9 @@ async function loadCategoryProduct() {
                         `
                 
                 document.getElementById("html").innerHTML += html
+
             }
+            document.getElementById("abc").innerHTML = abc
             for(let i in products) {
                 let id = products[i].id
                 let button = document.getElementById(id)
