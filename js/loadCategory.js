@@ -82,6 +82,7 @@ async function loadCategoryProduct() {
                     if(_id.target.id == "cart"+products[i].id){
                         // window.location = "cart.html?id=" + id
                         addToCart(products[i])
+                        alert("Sản phẩm bạn chọn đã được thêm vào giỏ hàng!")
                     }
                 }
                 
